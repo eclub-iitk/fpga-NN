@@ -1,0 +1,8 @@
+work	"bigfifo.vhd"
+work	"convolution.vhd"
+work	"fifo.vhd"
+work	"fifosmall.vhd"
+IEEE_proposed	"ieee_proposed/fixed_float_types_c.vhd"
+IEEE_proposed	"ieee_proposed/fixed_pkg_c.vhd"
+IEEE_proposed	"ieee_proposed/float_pkg_c.vhd"
+work	"top.vhd"

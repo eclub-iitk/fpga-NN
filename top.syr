@@ -1,0 +1,699 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/fixed_float_types_c.vhd" into library IEEE_proposed
+Parsing package <fixed_float_types>.
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/fixed_pkg_c.vhd" into library IEEE_proposed
+Parsing package <fixed_pkg>.
+Parsing package body <fixed_pkg>.
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/float_pkg_c.vhd" into library IEEE_proposed
+Parsing package <float_pkg>.
+Parsing package body <float_pkg>.
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" into library work
+Parsing entity <smallfifo>.
+Parsing architecture <Behavioral> of entity <smallfifo>.
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" into library work
+Parsing entity <fifo>.
+Parsing architecture <Behavioral> of entity <fifo>.
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" into library work
+Parsing entity <matrix_multiply_top>.
+Parsing architecture <Behavioral> of entity <matrix_multiply_top>.
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" into library work
+Parsing entity <bigfifo>.
+Parsing architecture <Behavioral> of entity <bigfifo>.
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/top.vhd" into library work
+Parsing entity <top>.
+Parsing architecture <Behavioral> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:746 - "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/fixed_pkg_c.vhd" Line 1470: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/fixed_pkg_c.vhd" Line 1471: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/fixed_pkg_c.vhd" Line 1472: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/float_pkg_c.vhd" Line 1021: Range is empty (null range)
+WARNING:HDLCompiler:746 - "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/float_pkg_c.vhd" Line 1022: Range is empty (null range)
+
+Elaborating entity <top> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <bigfifo> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" Line 103: Using initial value '1' for wr_enable1 since it is never assigned
+
+Elaborating entity <fifo> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 75: wr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 87: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 96: rd1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 103: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 111: rd2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 118: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 126: rd3 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 133: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 141: rd should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" Line 148: reset should be on the sensitivity list of the process
+
+Elaborating entity <smallfifo> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 73: wr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 81: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 90: rd1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 97: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 105: rd2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 112: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 120: rd3 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" Line 127: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" Line 187: fifo1_full should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" Line 192: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" Line 203: fifo2_full should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" Line 208: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" Line 218: fifo3_full should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" Line 232: reset should be on the sensitivity list of the process
+
+Elaborating entity <matrix_multiply_top> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 79: Using initial value "00111111100000000000000000000000" for kc_1 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 80: Using initial value "00000000000000000000000000000000" for kc_2 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 81: Using initial value "10111111100000000000000000000000" for kc_3 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 82: Using initial value "01000000000000000000000000000000" for kc_4 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 83: Using initial value "00000000000000000000000000000000" for kc_5 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 84: Using initial value "11000000000000000000000000000000" for kc_6 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 85: Using initial value "00111111100000000000000000000000" for kc_7 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 86: Using initial value "00000000000000000000000000000000" for kc_8 since it is never assigned
+WARNING:HDLCompiler:871 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 87: Using initial value "10111111100000000000000000000000" for kc_9 since it is never assigned
+WARNING:HDLCompiler:1853 - "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" Line 89: Variable done does not hold its value under NOT(clock-edge) condition
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "/home/nitish/Desktop/apurva projects/finalversion1/top.vhd".
+        fifodepth = 150
+        pixelvectorsize = 8
+        stride = 1
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <bigfifo>.
+    Related source file is "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd".
+        pixelvectorsize = 8
+        stride = 1
+    Found 1-bit register for signal <wr_enable2>.
+    Found 1-bit register for signal <flag_fifo1>.
+    Found 1-bit register for signal <fifo2_r>.
+    Found 1-bit register for signal <wr_enable3>.
+    Found 1-bit register for signal <flag_fifo2>.
+    Found 1-bit register for signal <fifo1_r1>.
+    Found 1-bit register for signal <fifo1_r2>.
+    Found 1-bit register for signal <fifo1_r3>.
+    Found 1-bit register for signal <fifo2_r1>.
+    Found 1-bit register for signal <fifo2_r2>.
+    Found 1-bit register for signal <fifo2_r3>.
+    Found 1-bit register for signal <fifo3_r1>.
+    Found 1-bit register for signal <fifo3_r2>.
+    Found 1-bit register for signal <fifo3_r3>.
+    Found 1-bit register for signal <datardy_sig>.
+    Found 1-bit register for signal <flag_fifo3>.
+    Found 1-bit register for signal <fifo1_r>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <bigfifo> synthesized.
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd".
+        fifodepth = 150
+        pixelvectorsize = 8
+        stride = 1
+    Found 8-bit register for signal <dataout1>.
+    Found 8-bit register for signal <r1ptrc>.
+    Found 8-bit register for signal <dataout2>.
+    Found 8-bit register for signal <dataout3>.
+    Found 8-bit register for signal <dataout>.
+    Found 8-bit register for signal <readptrc>.
+    Found 8-bit register for signal <writeptrc>.
+    Found 1-bit register for signal <r3ptrc<7>>.
+    Found 1-bit register for signal <r3ptrc<6>>.
+    Found 1-bit register for signal <r3ptrc<5>>.
+    Found 1-bit register for signal <r3ptrc<4>>.
+    Found 1-bit register for signal <r3ptrc<3>>.
+    Found 1-bit register for signal <r3ptrc<2>>.
+    Found 1-bit register for signal <r3ptrc<1>>.
+    Found 1-bit register for signal <r3ptrc<0>>.
+    Found 1-bit register for signal <r2ptrc<7>>.
+    Found 1-bit register for signal <r2ptrc<6>>.
+    Found 1-bit register for signal <r2ptrc<5>>.
+    Found 1-bit register for signal <r2ptrc<4>>.
+    Found 1-bit register for signal <r2ptrc<3>>.
+    Found 1-bit register for signal <r2ptrc<2>>.
+    Found 1-bit register for signal <r2ptrc<1>>.
+    Found 1-bit register for signal <r2ptrc<0>>.
+    Found 8-bit adder for signal <writeptrc[7]_GND_13_o_add_1_OUT> created at line 77.
+    Found 8-bit adder for signal <r1ptrc[7]_GND_13_o_add_7_OUT> created at line 98.
+    Found 8-bit adder for signal <r2ptrc[7]_GND_13_o_add_14_OUT> created at line 113.
+    Found 8-bit adder for signal <r3ptrc[7]_GND_13_o_add_21_OUT> created at line 128.
+    Found 8-bit adder for signal <readptrc[7]_GND_13_o_add_28_OUT> created at line 143.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <pix_row>, simulation mismatch.
+    Found 150x8-bit dual-port RAM <Mram_pix_row> for signal <pix_row>.
+    Summary:
+	inferred   4 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <fifo> synthesized.
+
+Synthesizing Unit <smallfifo>.
+    Related source file is "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd".
+        fifodepth = 9
+        pixelvectorsize = 8
+        stride = 1
+    Found 8-bit register for signal <dataout1>.
+    Found 4-bit register for signal <r1ptrc>.
+    Found 8-bit register for signal <dataout2>.
+    Found 8-bit register for signal <dataout3>.
+    Found 4-bit register for signal <writeptrc>.
+    Found 1-bit register for signal <r3ptrc<3>>.
+    Found 1-bit register for signal <r3ptrc<2>>.
+    Found 1-bit register for signal <r3ptrc<1>>.
+    Found 1-bit register for signal <r3ptrc<0>>.
+    Found 1-bit register for signal <r2ptrc<3>>.
+    Found 1-bit register for signal <r2ptrc<2>>.
+    Found 1-bit register for signal <r2ptrc<1>>.
+    Found 1-bit register for signal <r2ptrc<0>>.
+    Found 4-bit adder for signal <writeptrc[3]_GND_15_o_add_1_OUT> created at line 75.
+    Found 4-bit adder for signal <r1ptrc[3]_GND_15_o_add_6_OUT> created at line 92.
+    Found 4-bit adder for signal <r2ptrc[3]_GND_15_o_add_13_OUT> created at line 107.
+    Found 4-bit adder for signal <r3ptrc[3]_GND_15_o_add_20_OUT> created at line 122.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <pix_row>, simulation mismatch.
+    Found 9x8-bit dual-port RAM <Mram_pix_row> for signal <pix_row>.
+WARNING:Xst:737 - Found 1-bit latch for signal <fullvar>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   4 Multiplexer(s).
+Unit <smallfifo> synthesized.
+
+Synthesizing Unit <matrix_multiply_top>.
+    Related source file is "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd".
+        pixelvectorsize = 8
+WARNING:Xst:647 - Input <pixel_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_6> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_7> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_8> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixel_9> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <output>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <matrix_multiply_top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 150x8-bit dual-port RAM                               : 8
+ 9x8-bit dual-port RAM                                 : 3
+# Adders/Subtractors                                   : 14
+ 4-bit adder                                           : 4
+ 8-bit adder                                           : 10
+# Registers                                            : 77
+ 1-bit register                                        : 57
+ 4-bit register                                        : 2
+ 8-bit register                                        : 18
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <wr_enable3> in Unit <fifo> is equivalent to the following FF/Latch, which will be removed : <flag_fifo2> 
+INFO:Xst:2261 - The FF/Latch <wr_enable2> in Unit <fifo> is equivalent to the following FF/Latch, which will be removed : <flag_fifo1> 
+INFO:Xst:2261 - The FF/Latch <flag_fifo3> in Unit <fifo> is equivalent to the following FF/Latch, which will be removed : <datardy_sig> 
+WARNING:Xst:1710 - FF/Latch <output_0> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <output_1> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <output_2> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <output_3> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <output_4> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <output_5> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <output_6> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <output_7> (without init value) has a constant value of 0 in block <conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <flag_fifo3> of sequential type is unconnected in block <fifo>.
+
+Synthesizing (advanced) Unit <fifo>.
+The following registers are absorbed into counter <r1ptrc>: 1 register on signal <r1ptrc>.
+The following registers are absorbed into counter <readptrc>: 1 register on signal <readptrc>.
+The following registers are absorbed into counter <writeptrc>: 1 register on signal <writeptrc>.
+INFO:Xst:3226 - The RAM <Mram_pix_row1> will be implemented as a BLOCK RAM, absorbing the following register(s): <dataout2>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <writeptrc>     |          |
+    |     diA            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     enB            | connected to signal <rd2>           | high     |
+    |     addrB          | connected to signal <r2ptrc>        |          |
+    |     doB            | connected to signal <dataout2>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_pix_row2> will be implemented as a BLOCK RAM, absorbing the following register(s): <dataout3>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <writeptrc>     |          |
+    |     diA            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     enB            | connected to signal <rd3>           | high     |
+    |     addrB          | connected to signal <r3ptrc>        |          |
+    |     doB            | connected to signal <dataout3>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_pix_row> will be implemented as a BLOCK RAM, absorbing the following register(s): <dataout1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <writeptrc>     |          |
+    |     diA            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     enB            | connected to signal <rd1>           | high     |
+    |     addrB          | connected to signal <r1ptrc>        |          |
+    |     doB            | connected to signal <dataout1>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_pix_row3> will be implemented as a BLOCK RAM, absorbing the following register(s): <dataout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <writeptrc>     |          |
+    |     diA            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 150-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     enB            | connected to signal <rd>            | high     |
+    |     addrB          | connected to signal <readptrc>      |          |
+    |     doB            | connected to signal <dataout>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <smallfifo>.
+The following registers are absorbed into counter <writeptrc>: 1 register on signal <writeptrc>.
+The following registers are absorbed into counter <r1ptrc>: 1 register on signal <r1ptrc>.
+INFO:Xst:3231 - The small RAM <Mram_pix_row1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <writeptrc>     |          |
+    |     diA            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 8-bit                      |          |
+    |     addrB          | connected to signal <r2ptrc>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_pix_row2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <writeptrc>     |          |
+    |     diA            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 8-bit                      |          |
+    |     addrB          | connected to signal <r3ptrc>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_pix_row> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <writeptrc>     |          |
+    |     diA            | connected to signal <datain>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 8-bit                      |          |
+    |     addrB          | connected to signal <r1ptrc>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <smallfifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 150x8-bit dual-port block RAM                         : 8
+ 9x8-bit dual-port distributed RAM                     : 3
+# Adders/Subtractors                                   : 6
+ 4-bit adder                                           : 2
+ 8-bit adder                                           : 4
+# Counters                                             : 8
+ 4-bit up counter                                      : 2
+ 8-bit up counter                                      : 6
+# Registers                                            : 89
+ Flip-Flops                                            : 89
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <output_0> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_1> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_2> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_3> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_4> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_5> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_6> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <output_7> (without init value) has a constant value of 0 in block <matrix_multiply_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <flag_fifo2> in Unit <bigfifo> is equivalent to the following 2 FFs/Latches, which will be removed : <fifo2_r> <wr_enable3> 
+INFO:Xst:2261 - The FF/Latch <wr_enable2> in Unit <bigfifo> is equivalent to the following 2 FFs/Latches, which will be removed : <flag_fifo1> <fifo1_r> 
+INFO:Xst:2261 - The FF/Latch <fifo1_r1> in Unit <bigfifo> is equivalent to the following 10 FFs/Latches, which will be removed : <fifo1_r2> <fifo2_r2> <fifo1_r3> <fifo2_r1> <fifo2_r3> <fifo3_r1> <datardy_sig> <fifo3_r2> <fifo3_r3> <flag_fifo3> 
+WARNING:Xst:2973 - All outputs of instance <fifo> of block <bigfifo> are unconnected in block <top>. Underlying logic will be removed.
+
+Optimizing unit <top> ...
+
+Optimizing unit <bigfifo> ...
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <smallfifo> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 9
+#      OBUF                        : 9
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          19
+ Number of bonded IOBs:                   9  out of    640     1%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.94 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+
+Total memory usage is 439892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   73 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

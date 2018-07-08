@@ -1,0 +1,42 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/nitish/Desktop/apurva projects/finalversion1/testbench_isim_beh.exe -prj /home/nitish/Desktop/apurva projects/finalversion1/testbench_beh.prj testbench 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/fixed_float_types_c.vhd" into library IEEE_proposed
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/fixed_pkg_c.vhd" into library IEEE_proposed
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/ieee_proposed/float_pkg_c.vhd" into library IEEE_proposed
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/fifosmall.vhd" into library work
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/fifo.vhd" into library work
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/convolution.vhd" into library work
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/bigfifo.vhd" into library work
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/top.vhd" into library work
+Parsing VHDL file "/home/nitish/Desktop/apurva projects/finalversion1/tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 108476 KB
+Fuse CPU Usage: 1630 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package fixed_float_types
+Compiling package math_real
+Compiling package fixed_pkg
+Compiling package float_pkg
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity fifo [\fifo(150,8,1)\]
+Compiling architecture behavioral of entity smallfifo [\smallfifo(9,8,1)\]
+Compiling architecture behavioral of entity bigfifo [\bigfifo(8,1)\]
+Compiling architecture behavioral of entity matrix_multiply_top [\matrix_multiply_top(8)\]
+Compiling architecture behavioral of entity top [\top(150,8,1)\]
+Compiling architecture behavior of entity testbench
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 22 VHDL Units
+Built simulation executable /home/nitish/Desktop/apurva projects/finalversion1/testbench_isim_beh.exe
+Fuse Memory Usage: 711368 KB
+Fuse CPU Usage: 2330 ms
+GCC CPU Usage: 12770 ms
